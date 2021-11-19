@@ -1,0 +1,9 @@
+.idea/
+.classpath
+.project
+
+build/
+target/
+.settings/
+# Project exclude paths
+/.gradle/
