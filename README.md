@@ -22,15 +22,15 @@ This application is using Quarkus. To run and build the appication follow the be
 
 ## Build Docker Container
 
-Before building the container image run:
+### Before building the container image run:
 
   ./gradlew build
 
-Then, build the image with:
+### Then, build the image with:
 
   docker build -f src/main/docker/Dockerfile.jvm -t quarkus/code-with-quarkus-jvm .
 
-Then run the container using:
+### Then run the container using:
 
   docker run -i --rm -p 8080:8080 quarkus/code-with-quarkus-jvm
 
