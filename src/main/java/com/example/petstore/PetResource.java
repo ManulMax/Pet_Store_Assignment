@@ -115,7 +115,6 @@ public class PetResource {
 
 	}
 
-	@APIResponses(value = {@APIResponse(responseCode = "200", description = "Successfully added pet")})
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response addPet(Pet newPet) {
@@ -137,9 +136,14 @@ public class PetResource {
 		return Response.ok(pets).build();
 	}
 
-//	@DELETE
-//	@Path("/delete/{petId}")
-//	public Response deleteById(@PathParam("petId") int petId){
-//		return ("");
-//	}
+	@DELETE
+	@Path("/delete/{petId}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response deletePet(@PathParam("petId") Integer petId) {
+//		if(!pets.getPets(petId)){
+//			return Response.status(Status.NOT_FOUND).build();
+//		}
+//		boolean res = pets.deletePet(petId);
+		return Response.ok().build();
+	}
 }
